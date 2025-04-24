@@ -6,17 +6,16 @@ import Saludo from './components/Saludo'
 import Botones from './components/Botones'
 import ListaProductos from './components/ListaDeUsuarios'
 import Tarjeta from './components/Tarjetas'
-
+import Contador from '.components/Contador';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Main from './components/Main';
-import Gallery from './components/Gallery';
+import Main from './components/Main';c
 import Footer from './components/Footer';
 
 
 function App() {
 
- let productos = ['producto1', 'producto2', 'producto3', 'producto4']
+  let productos = ['producto1', 'producto2', 'producto3', 'producto4']
   const promociones = [
     {
       id: 1,
@@ -39,40 +38,41 @@ function App() {
       imagenUrl: 'https://placehold.co/200x200',
       enlace: '/compra1llevate2'
     }
-  ]; 
+  ];
 
-  const mostrarMensaje =() => {
+  const mostrarMensaje = () => {
     console.log("hice click")
   }
   return (
     <>
-    <Header/>
-    <Nav/>
-    <button
-     onClick={mostrarMensaje}>Ejemplo de guia</button>
-    <Main/>
-    <Gallery/>
-    <Footer/>
+      <Header />
+      <Nav />
+      <button
+        onClick={mostrarMensaje}>Ejemplo de guia</button>
+      <Main />
+      <Gallery />
+      <Contador />
+      <Footer />
     </>
-/*
-    { <div>
-      <Saludo name='emi' />
-      <Botones texto='aceptar' color='blue' />
-      <Botones texto='cancelar' color='red' />
-      <Botones texto='Ver Mas' color='green' />
-      <ListaProductos productos={productos} />
-      <div className='tarjeta'>
-        {
-          promociones.map((promocion) =>
-            <Tarjeta key={promocion.id} titulo={promocion.titulo}
-              img={promocion.imagenUrl}
-              descripcion={promocion.descripcion}
-              // agregar boton que falta
-              />
-          )
-        }
-      </div>
-    </div> }*/
+    /*
+        { <div>
+          <Saludo name='emi' />
+          <Botones texto='aceptar' color='blue' />
+          <Botones texto='cancelar' color='red' />
+          <Botones texto='Ver Mas' color='green' />
+          <ListaProductos productos={productos} />
+          <div className='tarjeta'>
+            {
+              promociones.map((promocion) =>
+                <Tarjeta key={promocion.id} titulo={promocion.titulo}
+                  img={promocion.imagenUrl}
+                  descripcion={promocion.descripcion}
+                  // agregar boton que falta
+                  />
+              )
+            }
+          </div>
+        </div> }*/
 
   )
 }
