@@ -51,7 +51,7 @@ function App() {
         onClick={mostrarMensaje}>Ejemplo de guia</button>
       <Main />
       <Gallery />
-      <Contador />
+      <Contador />zz
       <Footer />
     </>
     /*
