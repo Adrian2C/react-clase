@@ -1,17 +1,22 @@
 import React from 'react';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
-import Main from '../components/Main';
 import Footer from '../components/Footer';
+import Main from '../components/Main';
 
-import {productList} from '../utils/data';
+import { productsList } from '../utils/data';
+import ProductList from '../components/ProductsList'
+import Cart from '../components/Cart'
 
-const Home = () => {
+const Home = ({ cart, handleAddToCart }) => {
+    const countItem = cart.length
     return (
         <>
             <Header />
-            <Nav />
-            <Main data={productList}/>
+            <Nav countItem={countItem} />
+            <Main />
+            <ProductList products={productsList} addToCart={handleAddToCart} />
+            <Cart cartItems={cart} />
             <Footer />
         </>
     )

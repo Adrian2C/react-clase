@@ -6,7 +6,7 @@ const Product = ({ product, addToCart }) => {
             {/* este va a traer los productos, su precio */}
             <span>{product.name} - ${product.price}</span>
             {/*  y el boton va a tener un texto qe diga agregar, y hacer funcionar la function de addToCart con el evento onClick */}
-            <button onClick={addToCart(product)}>agregar</button>
+            <button onClick={() => addToCart(product)}> Agregar</button>
         </div>
     )
 }
