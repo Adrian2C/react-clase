@@ -4,7 +4,7 @@ import { useState } from 'react'
 function Contador() {
     console.log(useState(0))
 
-    const [contador, setContador] = useState=(0);
+    const [contador, setContador] = useState(0);
 
     return(
         <div>

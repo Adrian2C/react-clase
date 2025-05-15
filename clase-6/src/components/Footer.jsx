@@ -9,3 +9,12 @@ const Footer = () => {
 }
 
 export default Footer
+<<<<<<< HEAD
+=======
+
+function nombre(){}
+
+const saludo = function(){}
+
+const algo= ()=>{}
+>>>>>>> 013bd3098f2863a9cc17e823e85ce048b36603fe
