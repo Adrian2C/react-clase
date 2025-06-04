@@ -11,6 +11,8 @@ const Admin = () => {
         loading,
         open,
         setOpen,
+        openEditor,
+        setOpenEditor,
         seleccionado,
         setSeleccionado,
         agregarProducto,

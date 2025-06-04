@@ -9,6 +9,9 @@ export const CartProvider = ({ children }) => {
     const [error, setError] = useState(false)
     const [isAuthenticated, setIsAuth] = useState(false)
 
+    //barra de busqueda de elementos
+    const [busqueda, setBusqueda] = useState(' ')
+
     useEffect(() => {
         fetch('https://682e2f0e746f8ca4a47c2dbd.mockapi.io/product')
             .then(respuesta => respuesta.json())
@@ -26,6 +29,7 @@ export const CartProvider = ({ children }) => {
 
     }, [])
 
+    const productosFiltrados = productos.filter((producto) => producto?.nombre.toLowerCase().includes(busqueda.toLocaleLowerCase()))
     const handleAddToCart = (product) => {
 
         const productInCart = cart.find((item) => item.id === product.id);
@@ -54,11 +58,11 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider 
-        value={
+        <CartContext.Provider
+            value={
 
-            { cart, productos, cargando, error, handleAddToCart, handleDeleteFromCart, isAuthenticated,setIsAuth }
-        }>
+                { cart, productos, cargando, error, handleAddToCart, handleDeleteFromCart, isAuthenticated, setIsAuth,productosFiltrados }
+            }>
             {children}
         </CartContext.Provider>
     )
